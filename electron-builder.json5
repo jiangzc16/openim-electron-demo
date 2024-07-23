@@ -9,7 +9,7 @@
     output: "release/Demo/${version}",
   },
   files: ["dist-electron", "dist"],
-  productName: "OpenIM-Demo",
+  productName: "lkrcb-IM",
   mac: {
     artifactName: "${productName}_${version}_${arch}.${ext}",
     target: ["dmg"],
@@ -28,7 +28,7 @@
   linux: {
     icon: "./dist/icons/icon.png",
     target: "deb",
-    maintainer: "openim-demo",
+    maintainer: "lkrcb-IM",
     artifactName: "${productName}_${version}_${arch}.${ext}",
   },
   nsis: {
@@ -39,6 +39,6 @@
     createDesktopShortcut: true,
     createStartMenuShortcut: true,
     deleteAppDataOnUninstall: true,
-    shortcutName: "OpenIM-Demo",
+    shortcutName: "lkrcb-IM",
   },
 }

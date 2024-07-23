@@ -1,5 +1,5 @@
 {
-  "name": "OpenIM-Demo",
+  "name": "lkrcb-IM",
   "version": "1.0.0",
   "main": "dist-electron/main/index.js",
   "description": "OpenIM Electron Demo.",
