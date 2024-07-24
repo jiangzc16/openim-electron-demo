@@ -4,13 +4,16 @@ import { FC, memo } from "react";
 
 import { notificationMessageFormat } from "@/utils/imCommon";
 
+import styles from "./MessageItem/message-item.module.scss";
+
 const NotificationMessage: FC<{
   message: MessageItem;
 }> = ({ message }) => {
   return (
     <div className="relative" id={`chat_${message.clientMsgID}`}>
       <div
-        className={clsx("mx-6 py-3 text-center text-xs text-[var(--sub-text)]")}
+        className={styles.bubble}
+        // className={clsx("mx-6 py-3 text-center text-xs text-[var(--sub-text)]")}
         dangerouslySetInnerHTML={{
           __html: String(notificationMessageFormat(message)),
         }}

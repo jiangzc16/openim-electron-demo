@@ -11,4 +11,8 @@ export const OPENIM_IP = "192.168.101.103";
 
 export const WS_URL = `ws://${OPENIM_IP}:10001`;
 export const API_URL = `http://${OPENIM_IP}:10002`;
-export const USER_URL = `http://${OPENIM_IP}:10008`;
+export const CHAT_URL = `http://${OPENIM_IP}:10008`;
+
+export const getWsUrl = () => localStorage.getItem("wsUrl") || WS_URL;
+export const getApiUrl = () => localStorage.getItem("apiUrl") || API_URL;
+export const getChatUrl = () => localStorage.getItem("chatUrl") || CHAT_URL;

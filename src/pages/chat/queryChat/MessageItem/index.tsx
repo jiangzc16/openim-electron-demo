@@ -4,6 +4,7 @@ import type { MessageItem } from "open-im-sdk-wasm/lib/types/entity";
 import { FC, memo, useCallback } from "react";
 
 import OIMAvatar from "@/components/OIMAvatar";
+import NotificationMessage from "@/pages/chat/queryChat/NotificationMessage";
 import { useUserStore } from "@/store";
 import { formatMessageTime } from "@/utils/imCommon";
 
@@ -26,6 +27,7 @@ const components: Record<number, FC<IMessageItemProps>> = {
   [MessageType.TextMessage]: TextMessageRender,
   [MessageType.PictureMessage]: MediaMessageRender,
   [MessageType.VideoMessage]: MediaMessageRender,
+  [MessageType.OANotification]: NotificationMessage,
 };
 
 const MessageItem: FC<IMessageItemProps> = ({
