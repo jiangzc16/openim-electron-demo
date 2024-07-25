@@ -4,6 +4,7 @@ import { memo, useEffect, useRef } from "react";
 import { Virtuoso, VirtuosoHandle } from "react-virtuoso";
 
 import { SystemMessageTypes } from "@/constants/im";
+import SystemNotification from "@/pages/chat/queryChat/SystemNotification";
 import { useUserStore } from "@/store";
 import emitter from "@/utils/events";
 
@@ -82,7 +83,8 @@ const ChatContent = ({ isNotificationSession }: { isNotificationSession: boolean
         computeItemKey={(_, item) => item.clientMsgID}
         itemContent={(_, message) => {
           if (SystemMessageTypes.includes(message.contentType)) {
-            return <NotificationMessage key={message.clientMsgID} message={message} />;
+            return <SystemNotification key={message.clientMsgID} message={message} />;
+            // return <NotificationMessage key={message.clientMsgID} message={message} />;
           }
           const isSender = selfUserID === message.sendID;
           return (
